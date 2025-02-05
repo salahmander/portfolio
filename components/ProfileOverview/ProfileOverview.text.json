@@ -3,12 +3,7 @@
         "sitename": "salahabdo.co.uk",
         "name": "Salah Abdo",
         "tagline": "Umbra Creations: Where Every Idea Finds its Light",
-        "resume": "CV/Resume",
         "about": "Hey 👋 Salah here! I'm a Frontend Engineer with a Computer Science degree and over 4 years of experience delivering high-quality software solutions. Skilled in React, TypeScript, JavaScript, and Python, with a proven track record of building scalable, user-centric applications.",
-        "links": {
-            "github": "https://github.com/salahmander",
-            "linkedin": "https://www.linkedin.com/in/salah-abdo/"
-        },
         "skills": [
             {
                 "category": "Interest",
@@ -44,7 +39,7 @@
                     "Unix (Mac OS)",
                     "Linux (Ubuntu)",
                     "Visual Studio Code",
-                    "git",
+                    "Git",
                     "GitHub",
                     "AWS",
                     "Vercel"

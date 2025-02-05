@@ -5,6 +5,7 @@ import { Rss } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import localText from "./ProfileOverview.text.json";
+import Socials from "@/components/Socials/Socials";
 
 const ProfileOverview = () => {
   const skills = localText.profileOverview.skills;
@@ -34,6 +35,7 @@ const ProfileOverview = () => {
         {localText.profileOverview.about}
         <span className="sr-only">bio</span>
       </p>
+      <Socials />
       <div className="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">
         {skills.map((skill) => (
           <p key={skill.category}>
