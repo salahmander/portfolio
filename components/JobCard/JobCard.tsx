@@ -1,6 +1,9 @@
+import { calculateJobDuration } from "./JobCard.helpers";
 import type { JobCardProps } from "./JobCard.types";
 
 const JobCard = ({ job }: JobCardProps) => {
+  const { startDate, endDate, isCurrent } = job;
+  const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
   return (
     <div className="p-4 border rounded-lg shadow-md bg-white">
       <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
@@ -23,7 +26,7 @@ const JobCard = ({ job }: JobCardProps) => {
       </div>
       <p className="text-s">{job.description}</p>
       <p className="text-xs px-2 text-right">
-        {job.startDate} - {job.isCurrent ? "Present" : job.endDate} ·
+        {startDate} - {isCurrent ? "Present" : endDate} · {jobDuration}
       </p>
       <p className="tracking-tight text-lg font-bold">{job.position}</p>
       <ul className="list-disc pl-5 text-sm ">
