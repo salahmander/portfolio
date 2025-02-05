@@ -1,0 +1,24 @@
+echo "🚀 Running pre-push tasks..."
+
+echo "🔍 Running lint..."
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "❌ Lint errors found!"
+  exit 1
+fi
+
+echo "✅ Lint check passed!"
+
+echo "🔬 Running tests..."
+npm test
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed!"
+  exit 1
+fi
+
+echo "✅ All tests passed!"
+
+remote="$1"
+url="$2"
+echo "Pushing to '$remote' at '$url'..."
+exit 0

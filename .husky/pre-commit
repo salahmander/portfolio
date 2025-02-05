@@ -1,0 +1,24 @@
+echo "🔍 Running lint on staged files..."
+
+# Get only staged files (Added, Copied, Modified)
+STAGED_FILES="$(git diff --cached --name-only --diff-filter=ACM)"
+
+echo "$STAGED_FILES"
+
+# If no staged files, skip
+if [ -z "$STAGED_FILES" ]; then
+  echo "No staged files found. Skipping lint."
+  exit 0
+fi
+
+# Run your lint script, passing staged files as arguments
+npm run lint-file $STAGED_FILES
+
+# If linting fails, exit with an error
+if [ $? -ne 0 ]; then
+  echo "❌ Fix lint errors before committing!"
+  exit 1
+fi
+
+echo "✅ Lint check passed!"
+exit 0
