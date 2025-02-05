@@ -1,6 +1,11 @@
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 
-export default function Page() {
+import Motorway from "@/components/JobCard/Companies/Motorway";
+import LevelPrime from "@/components/JobCard/Companies/LevelPrime";
+import BullionByPost from "@/components/JobCard/Companies/BullionByPost";
+import Faurecia from "@/components/JobCard/Companies/Faurecia";
+
+const HomePage = () => {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap justify-between lg:divide-x">
@@ -8,9 +13,19 @@ export default function Page() {
           <ProfileOverview />
         </div>
         <div className="relative w-full max-w-4xl mx-auto lg:h-full lg:w-3/5 p-2 md:p-8 lg:overflow-y-scroll">
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8"></div>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
+            <div className="w-full max-w-xl space-y-10 mt-10">
+              {/* TODO: Create feature - Create CRUD Backend to handle markdown */}
+              <Motorway />
+              <LevelPrime />
+              <BullionByPost />
+              <Faurecia />
+            </div>
+          </div>
         </div>
       </div>
     </main>
   );
-}
+};
+
+export default HomePage;
