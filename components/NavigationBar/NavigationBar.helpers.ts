@@ -10,6 +10,10 @@ export const navigationLinks: NavigationLinks = [
       url: "/projects"
     },
     {
+      title: "My Repositories",
+      url: "/repositories",
+    },
+    {
       title: "Blogs",
       url: "/blogs",
     },
