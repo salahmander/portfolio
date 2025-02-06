@@ -7,7 +7,7 @@ const ProfileOverview = () => {
   const skills = localText.profileOverview.skills;
   return (
     <section className="w-full flex flex-col lg:min-h-[calc(100vh-7rem)]">
-      <Link href="/">
+      <Link href="https://www.salahabdo.co.uk/">
         <span className="font-mono text-sm underline">
           {localText.profileOverview.sitename}
         </span>
