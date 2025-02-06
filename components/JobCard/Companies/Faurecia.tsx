@@ -1,4 +1,10 @@
+import { calculateJobDuration } from "../JobCard.helpers";
+
 const Faurecia = () => {
+  const startDate = "2017-01-01";
+  const endDate = "2018-01-01";
+  const isCurrent = false;
+  const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
   return (
     <div>
       <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
@@ -19,7 +25,7 @@ const Faurecia = () => {
         </div>
       </div>
       <p className="text-s">(B2B) – Automotive components for manufacturers.</p>
-      <p className="text-xs px-2 text-right">2017 - 2018</p>
+      <p className="text-xs px-2 text-right">2017 - 2018 · {jobDuration}</p>
       <p className="tracking-tight text-lg font-bold">
         Information System Engineer
       </p>

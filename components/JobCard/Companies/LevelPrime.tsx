@@ -1,4 +1,10 @@
+import { calculateJobDuration } from "../JobCard.helpers";
+
 const LevelPrime = () => {
+  const startDate = "2021-01-01";
+  const endDate = "2022-04-01";
+  const isCurrent = false;
+  const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
   return (
     <div>
       <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
@@ -18,10 +24,10 @@ const LevelPrime = () => {
           </span>
         </div>
       </div>
-      <p className="text-s">
-        (SDaaS) – For Honda R&D Germany
+      <p className="text-s">(SDaaS) – For Honda R&D Germany</p>
+      <p className="text-xs px-2 text-right">
+        Jan 2021 - Apr 2022 · {jobDuration}
       </p>
-      <p className="text-xs px-2 text-right">Jan 2021 - Aug 2022</p>
 
       <p className="tracking-tight text-lg font-bold">Software Engineer</p>
       <ul className="list-disc pl-5 text-sm ">
