@@ -1,5 +1,6 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
+import RepositoryCard from "@/components/RepositoryCard/RepositoryCard";
 
 const Repositories = () => {
   return (
@@ -11,7 +12,15 @@ const Repositories = () => {
         <div className="relative w-full max-w-4xl mx-auto lg:h-full lg:w-3/5 p-2 md:p-8 lg:overflow-y-scroll">
           <NavigationBar />
           <div className="my-8 w-full max-w-3xl md:grid grid-cols-2 gap-3">
-
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
+            <RepositoryCard />
           </div>
         </div>
       </div>
