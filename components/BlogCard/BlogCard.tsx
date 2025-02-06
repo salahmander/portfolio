@@ -21,9 +21,9 @@ const BlogCard = () => {
             Lorem, ipsum dolor.
           </h2>
           <div className="flex items-center gap-2 flex-wrap mt-2">
-            {["Lorem", "Lorem", "Lorem"].map((tag) => (
+            {["Lorem", "Lorem", "Lorem"].map((tag, index) => (
               <p
-                key={tag}
+                key={index}
                 className="px-2 py-1 rounded-lg bg-muted text-muted-foreground text-xs cursor-pointer"
               >
                 {tag}
