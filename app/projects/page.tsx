@@ -2,7 +2,7 @@ import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
@@ -20,4 +20,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;
