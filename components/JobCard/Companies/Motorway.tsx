@@ -27,9 +27,43 @@ const Motorway = () => {
       <p className="text-s">
         (B2B) – Online marketplace for selling used cars to dealers
       </p>
-      <p className="text-xs px-2 text-right">Apr 2022 - Aug 2024 · {jobDuration}</p>
+      <p className="text-xs px-2 text-right">
+        Apr 2022 - Aug 2024 · {jobDuration}
+      </p>
 
       <p className="tracking-tight text-lg font-bold">Frontend Engineer</p>
+      <div className="flex flex-wrap gap-1 mb-2">
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          React
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          TypeScript/JavaScript
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          HTML/CSS
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Jest/React Testing Library
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          AWS
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Datadog
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          WebSockets
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Storybook
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          CI/CD
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Agile
+        </span>
+      </div>
       <p className="text-sm">
         Focused on the vehicle profiling journey, managing both the Mobile
         Photos Web App and the Main Seller Web App, where customers prepared

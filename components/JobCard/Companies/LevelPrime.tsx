@@ -30,6 +30,32 @@ const LevelPrime = () => {
       </p>
 
       <p className="tracking-tight text-lg font-bold">Software Engineer</p>
+      <div className="flex flex-wrap gap-1 mb-2">
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          React
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          JavaScript
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Python
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          HTML/CSS
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Jest/React Testing Library
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Plotly
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Agile
+        </span>
+        <span className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default">
+          Jupyter Notebook
+        </span>
+      </div>
       <ul className="list-disc pl-5 text-sm ">
         <li>
           <strong>Led the enhancements</strong> to the{" "}
