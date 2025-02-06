@@ -8,6 +8,7 @@ export type JobDetails = {
   isCurrent: boolean;
   position: string;
   description: string;
+  skills: string[];
   achievements: { title: string; details: string }[];
 };
 

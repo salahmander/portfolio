@@ -29,6 +29,16 @@ const JobCard = ({ job }: JobCardProps) => {
         {startDate} - {isCurrent ? "Present" : endDate} · {jobDuration}
       </p>
       <p className="tracking-tight text-lg font-bold">{job.position}</p>
+      <div className="flex flex-wrap gap-1 mb-2">
+        {job.skills.map((skill, index) => (
+          <span
+            key={index}
+            className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
       <ul className="list-disc pl-5 text-sm ">
         {job.achievements.map((achievement, index) => (
           <li key={index}>
