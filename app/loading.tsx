@@ -1,5 +1,12 @@
 "use client";
 
+/**
+ * LoadingPage component renders a full-screen loading indicator.
+ *
+ * @returns {JSX.Element} A React component that displays a loading message and a spinning animation.
+ *
+ * @component
+ */
 const LoadingPage = () => {
   return (
     <main className="relative w-full h-screen p-5">

@@ -7,6 +7,13 @@ type ErrorPageProps = {
   error: Error;
 };
 
+/**
+ * ErrorPage component displays an error message when something goes wrong.
+ *
+ * @param {ErrorPageProps} props - The properties for the ErrorPage component.
+ * @param {Error} props.error - The error object to be displayed.
+ * @returns {JSX.Element} The rendered error page component.
+ */
 const ErrorPage = ({ error }: ErrorPageProps) => {
   console.error(error);
   return (
