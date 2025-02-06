@@ -19,8 +19,14 @@ const ProfileOverview = () => {
         {localText.profileOverview.tagline}{" "}
         <span className="sr-only">tagline</span>
       </h3>
-      <p className="my-6 max-w-2xl text-foreground/80">
-        {localText.profileOverview.about}
+      <p className=" my-6 max-w-2xl text-foreground/90">
+        Hey 👋 <strong>Salah</strong> here! I&apos;m a{" "}
+        <strong>Frontend Engineer</strong> with a{" "}
+        <strong>Computer Science degree</strong> and over{" "}
+        <strong>4 years</strong> of <strong>experience</strong> delivering
+        high-quality software solutions. Skilled in{" "}
+        <strong>React, TypeScript, JavaScript, and Python</strong>, with a
+        proven track record of building scalable, user-centric applications.
         <span className="sr-only">bio</span>
       </p>
       <Socials />
