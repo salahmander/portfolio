@@ -1,3 +1,4 @@
+import BlogCard from "@/components/BlogCard/BlogCard";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 
@@ -11,6 +12,7 @@ const Blogs = () => {
         <section className="flex flex-col items-center relative w-full mx-auto lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
           <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+            {Array(9).fill(<BlogCard />)}
           </div>
         </section>
       </div>
