@@ -1,0 +1,49 @@
+{
+    "profileOverview": {
+        "sitename": "salahabdo.co.uk",
+        "name": "Salah Abdo",
+        "tagline": "Umbra Creations: Where Every Idea Finds its Light",
+        "skills": [
+            {
+                "category": "Interest",
+                "options": [
+                    "Frontend Engineer",
+                    "Software Engineer",
+                    "Full Stack Engineer"
+                ]
+            },
+            {
+                "category": "Frontend",
+                "options": [
+                    "React.js",
+                    "Next.js",
+                    "HTML",
+                    "CSS",
+                    "SaaS",
+                    "Tailwind CSS",
+                    "Shadcn/ui"
+                ]
+            },
+            {
+                "category": "Programming Languages",
+                "options": [
+                    "TypeScript",
+                    "JavaScript",
+                    "Python"
+                ]
+            },
+            {
+                "category": "Tools",
+                "options": [
+                    "Unix (Mac OS)",
+                    "Linux (Ubuntu)",
+                    "Visual Studio Code",
+                    "Git",
+                    "GitHub",
+                    "AWS",
+                    "Vercel"
+                ]
+            }
+        ]
+    }
+}
