@@ -16,8 +16,8 @@ const HomePage = () => {
         </div>
         <div className="relative w-full max-w-4xl mx-auto lg:h-full lg:w-3/5 p-2 md:p-8 lg:overflow-y-scroll">
           <NavigationBar />
-          <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
-            <div className="w-full max-w-xl space-y-10">
+          <div className="my-8">
+            <div className="w-full max-w-lg space-y-10">
               {/* TODO: Create feature - Create CRUD Backend to handle markdown */}
               <UmbraCreations />
               <Motorway />
