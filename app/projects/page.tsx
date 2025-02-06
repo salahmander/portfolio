@@ -1,5 +1,6 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 const Projects = () => {
   return (
@@ -10,8 +11,11 @@ const Projects = () => {
         </div>
         <div className="relative w-full max-w-4xl mx-auto lg:h-full lg:w-3/5 p-2 md:p-8 lg:overflow-y-scroll">
           <NavigationBar />
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
-            <div className="w-full max-w-xl space-y-10"></div>
+          <div className="my-8 space-y-5">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
           </div>
         </div>
       </div>
