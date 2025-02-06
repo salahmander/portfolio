@@ -6,6 +6,7 @@ import {
   InstagramLogoIcon,
   GlobeIcon,
   VideoIcon,
+  MobileIcon,
 } from "@radix-ui/react-icons";
 
 import { Mail } from "lucide-react";
@@ -18,5 +19,6 @@ export const SocialIcons = {
   instagram: <InstagramLogoIcon />,
   website: <GlobeIcon />,
   youtube: <VideoIcon />,
+  mobile: <MobileIcon />,
   mail: <Mail size={16} />,
 };
