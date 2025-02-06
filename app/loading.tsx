@@ -1,12 +1,11 @@
 "use client";
 
-import ClipLoader from "react-spinners/ClipLoader";
-
 const LoadingPage = () => {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
-      <div className="w-full h-full border rounded-2xl flex justify-center items-center">
-        <ClipLoader size={150} aria-label="Loading Spinner" />
+      <div className="w-full h-full border rounded-2xl flex justify-center items-center text-black">
+        <h1 className="text-5xl font-bold mb-8 animate-pulse">Loading...</h1>
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-black"></div>
       </div>
     </main>
   );
