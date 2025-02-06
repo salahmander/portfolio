@@ -11,6 +11,9 @@ const Socials = () => {
       <Button className="shadow-none hover:bg-background hover:text-primary border-[0.3px] border-transparent hover:border-b-4 hover:border-primary/30 active:border-b transition-all">
         {localText.socials.scheduleBtn}
       </Button>
+      <Button className="shadow-none hover:bg-background hover:text-primary border-[0.3px] border-transparent hover:border-b-4 hover:border-primary/30 active:border-b transition-all">
+        {localText.socials.contactBtn} {SocialIcons["mail"]}
+      </Button>
       <Button
         variant="outline"
         className="active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100"
