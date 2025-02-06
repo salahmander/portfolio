@@ -1,9 +1,5 @@
 import Link from "next/link";
 
-import { Rss } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-
 import localText from "./ProfileOverview.text.json";
 import Socials from "@/components/Socials/Socials";
 
@@ -18,14 +14,6 @@ const ProfileOverview = () => {
       </Link>
       <div className="flex justify-between items-center mt-6">
         <h1 className="head-text-sm">{localText.profileOverview.name}</h1>
-        <div className="flex items-center gap-2">
-          <Button size="icon" variant="ghost" className="rounded-full" asChild>
-            <Link href="/feed">
-              <Rss size={18} />
-              <span className="sr-only">rss feed</span>
-            </Link>
-          </Button>
-        </div>
       </div>
       <h3 className="mt-2 text-lg">
         {localText.profileOverview.tagline}{" "}
