@@ -23,7 +23,7 @@ export const calculateJobDuration = (
   if (years === 0 && months === 0) return "Less than a month";
 
   const yearString = years > 0 ? `${years} yr${years > 1 ? "s" : ""}` : "";
-  const monthString = months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : "";
+  const monthString = months > 0 ? `${months + 1} mo${months > 1 ? "s" : ""}` : "";
 
   const jobDuration = [yearString, monthString].filter(Boolean).join(" ");
 
