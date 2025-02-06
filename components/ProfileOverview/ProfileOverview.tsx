@@ -36,7 +36,7 @@ const ProfileOverview = () => {
         <span className="sr-only">bio</span>
       </p>
       <Socials />
-      <div className="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">
+      <div className="flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">
         {skills.map((skill) => (
           <p key={skill.category}>
             <span className="font-semibold text-primary/90">
