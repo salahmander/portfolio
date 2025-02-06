@@ -1,4 +1,4 @@
-import { SocialIcons } from "./Socials.helper";
+import { SocialIcons } from "@/lib/SocialIcons";
 
 import localText from "./Socials.text.json";
 
