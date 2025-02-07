@@ -31,7 +31,7 @@ const DialogContactForm = () => {
             Fill out the form below to send me a message.
           </DialogDescription>
         </DialogHeader>
-        <ContactForm />
+        <ContactForm onSubmitSuccess={() => setIsOpen(false)} />
       </DialogContent>
     </Dialog>
   );

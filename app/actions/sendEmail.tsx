@@ -19,6 +19,7 @@ const sendEmail = async (formData: FormData) => {
     return {
       success: false,
       errors: validatedFields.error.flatten().fieldErrors,
+      message: "Oops! message not sent!"
     };
   }
 
