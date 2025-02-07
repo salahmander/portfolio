@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { SocialIcons } from "@/lib/SocialIcons";
+import ContactForm from "./ContactForm/ContactForm";
 
 const DialogContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const DialogContactForm = () => {
             Fill out the form below to send me a message.
           </DialogDescription>
         </DialogHeader>
-        Form
+        <ContactForm />
       </DialogContent>
     </Dialog>
   );
