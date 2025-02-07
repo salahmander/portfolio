@@ -3,14 +3,13 @@ import { SocialIcons } from "@/lib/SocialIcons";
 import localText from "./Socials.text.json";
 
 import { Button } from "@/components/ui/button";
+import ScheduleCallPopup from "@/components/ScheduleCallPopup/ScheduleCallPopup";
 
 const Socials = () => {
   const links = localText.socials.links;
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <Button className="shadow-none hover:bg-background hover:text-primary border-[0.3px] border-transparent hover:border-b-4 hover:border-primary/30 active:border-b transition-all">
-        {localText.socials.scheduleBtn} {SocialIcons["mobile"]}
-      </Button>
+      <ScheduleCallPopup />
       <Button className="shadow-none hover:bg-background hover:text-primary border-[0.3px] border-transparent hover:border-b-4 hover:border-primary/30 active:border-b transition-all">
         {localText.socials.contactBtn} {SocialIcons["mail"]}
       </Button>
