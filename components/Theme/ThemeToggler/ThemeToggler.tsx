@@ -21,14 +21,9 @@ const ThemeToggler = () => {
     }
   };
 
-  const toggleTheme = () => {
-    if (!document.startViewTransition) switchTheme();
-    document.startViewTransition(switchTheme);
-  };
-
   return (
     <Button
-      onClick={toggleTheme}
+      onClick={switchTheme}
       variant="ghost"
       size="icon"
       className="rounded-full"
