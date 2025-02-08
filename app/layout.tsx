@@ -1,3 +1,5 @@
+import { ThemeProvider } from "next-themes";
+
 import type { Metadata } from "next";
 
 import { ToastContainer } from "react-toastify";
@@ -34,8 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(fontHeading.variable)}>
-        {children}
-        <ToastContainer />
+        <ThemeProvider attribute="class" defaultTheme="light">
+          {children}
+          <ToastContainer />
+        </ThemeProvider>
       </body>
     </html>
   );
