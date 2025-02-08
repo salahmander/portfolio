@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import localText from "./ProfileOverview.text.json";
 import Socials from "@/components/Socials/Socials";
+import ThemeToggler from "../Theme/ThemeToggler/ThemeToggler";
 
 const ProfileOverview = () => {
   const skills = localText.profileOverview.skills;
@@ -14,6 +15,9 @@ const ProfileOverview = () => {
       </Link>
       <div className="flex justify-between items-center mt-6">
         <h1 className="head-text-sm">{localText.profileOverview.name}</h1>
+        <div className="flex items-center gap-2">
+          <ThemeToggler />
+        </div>
       </div>
       <h3 className="mt-2 text-lg">
         {localText.profileOverview.tagline}{" "}
