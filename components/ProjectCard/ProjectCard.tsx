@@ -12,7 +12,6 @@ const ProjectCard = () => {
       <article className="flex flex-col gap-2 w-full tablet:w-3/5">
         <div>
           <Link href="/" className="space-y-2 group">
-            {/* Title & Date */}
             <div className="inline-flex items-center gap-1">
               <div className="flex items-center gap-2 flex-wrap">
                 <h2 className="text-xl font-semibold font-heading">
@@ -26,8 +25,6 @@ const ProjectCard = () => {
                 <StepForward size={12} />
               </span>
             </div>
-
-            {/* Description */}
             <p className="text-sm text-secondary-foreground/80 font-light max-w-2xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae hic voluptate libero natus earum? Blanditiis a
