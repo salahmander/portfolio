@@ -1,10 +1,12 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 import AljabirMarket from "@/components/ProjectCard/Projects/AljabirMarket";
+import ArkBlueprint from "@/components/ProjectCard/Projects/ArkBlueprint";
 import AuctionService from "@/components/ProjectCard/Projects/AuctionService";
 import EverythingCrypto from "@/components/ProjectCard/Projects/EverythingCrypto";
 import NachtBootcamp from "@/components/ProjectCard/Projects/NachtBootcamp";
 import Portfolio from "@/components/ProjectCard/Projects/Portfolio";
+import PropertiesProject from "@/components/ProjectCard/Projects/PropertiesProject";
 
 const ProjectsPage = () => {
   return (
@@ -17,6 +19,8 @@ const ProjectsPage = () => {
           <NavigationBar />
           <div className="my-8 space-y-4 max-w-4xl">
             <Portfolio />
+            <PropertiesProject />
+            <ArkBlueprint />
             <AuctionService />
             <EverythingCrypto />
             <NachtBootcamp />
