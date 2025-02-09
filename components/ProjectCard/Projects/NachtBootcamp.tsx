@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import PostmanImage from "@/public/images/postman.webp"
+
 const NachtBootcamp = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -85,10 +87,10 @@ const NachtBootcamp = () => {
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
         <Link href="/">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={PostmanImage}
+            imageDark={PostmanImage}
+            width={500}
+            height={250}
             quality={100}
             alt="Lorem Picsum"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"

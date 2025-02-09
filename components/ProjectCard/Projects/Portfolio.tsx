@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import PortfolioImage from "@/public/images/portfolio.webp";
+
 const Portfolio = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -82,14 +84,14 @@ const Portfolio = () => {
       </article>
 
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
-        <Link href="/">
+        <Link href="https://github.com/salahmander/portfolio">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={PortfolioImage}
+            imageDark={PortfolioImage}
+            width={500}
+            height={250}
             quality={100}
-            alt="Lorem Picsum"
+            alt="Portfolio"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"
           />
         </Link>

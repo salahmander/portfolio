@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import ArkImage from "@/public/images/ark.webp"
+
 const ArkBlueprint = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -73,14 +75,14 @@ const ArkBlueprint = () => {
       </article>
 
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
-        <Link href="/">
+        <Link href="https://github.com/salahmander/ark-blueprint-storage">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={ArkImage}
+            imageDark={ArkImage}
+            width={500}
+            height={250}
             quality={100}
-            alt="Lorem Picsum"
+            alt="ARK: Survival Ascended"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"
           />
         </Link>

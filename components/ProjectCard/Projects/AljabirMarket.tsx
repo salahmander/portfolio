@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import MarketImage from "@/public/images/market.webp"
+
 const AljabirMarket = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -72,14 +74,14 @@ const AljabirMarket = () => {
       </article>
 
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
-        <Link href="/">
+        <Link href="https://github.com/salahmander/jabir-ecommerce">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={MarketImage}
+            imageDark={MarketImage}
+            width={500}
+            height={250}
             quality={100}
-            alt="Lorem Picsum"
+            alt="E-commerce"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"
           />
         </Link>

@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import CryptoImage from "@/public/images/crypto.webp"
+
 const EverythingCrypto = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -72,14 +74,14 @@ const EverythingCrypto = () => {
       </article>
 
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
-        <Link href="/">
+        <Link href="https://github.com/salahmander/everything-crypto">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={CryptoImage}
+            imageDark={CryptoImage}
+            width={500}
+            height={250}
             quality={100}
-            alt="Lorem Picsum"
+            alt="Cryptocurrency"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"
           />
         </Link>

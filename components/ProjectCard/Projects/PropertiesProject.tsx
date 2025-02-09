@@ -6,6 +6,8 @@ import { SocialIcons } from "@/lib/SocialIcons";
 
 import Picture from "@/components/Picture/Picture";
 
+import PropertiesImage from "@/public/images/properties.webp";
+
 const PropertiesProject = () => {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
@@ -36,8 +38,7 @@ const PropertiesProject = () => {
               property listing CRUD, Cloudinary image uploads, Mapbox
               integration, internal messaging, bookmarking, and social media
               sharing. Designed with Tailwind for responsive UI, this project
-              deepened my expertise in Next.js, MongoDB, and modern web
-              development.
+              deepened my expertise in Next.js, and MongoDB.
             </p>
           </Link>
         </div>
@@ -85,14 +86,14 @@ const PropertiesProject = () => {
       </article>
 
       <aside className="w-2/5 aspect-video overflow-hidden rounded-xl hidden tablet:block">
-        <Link href="/">
+        <Link href="https://github.com/salahmander/properties-project">
           <Picture
-            image="https://picsum.photos/250/100"
-            imageDark="https://picsum.photos/250/100"
-            width={250}
-            height={100}
+            image={PropertiesImage}
+            imageDark={PropertiesImage}
+            width={500}
+            height={250}
             quality={100}
-            alt="Lorem Picsum"
+            alt="Real Estate Platform"
             className="w-full h-full object-cover scale-100 hover:scale-105 transition"
           />
         </Link>
@@ -102,4 +103,3 @@ const PropertiesProject = () => {
 };
 
 export default PropertiesProject;
-
