@@ -1,4 +1,5 @@
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import type { Metadata } from "next";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
           <ToastContainer />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
