@@ -25,7 +25,7 @@ const ProfileOverview = () => {
       </h3>
       <p className=" my-6 max-w-2xl text-foreground/90">
         Hey 👋 <strong>Salah</strong> here! I&apos;m a{" "}
-        <strong>Frontend Engineer</strong> with a{" "}
+        <strong>Software Engineer</strong> with a{" "}
         <strong>Computer Science degree</strong> and over{" "}
         <strong>4 years</strong> of <strong>experience</strong> delivering
         high-quality software solutions. Skilled in{" "}

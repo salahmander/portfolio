@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+This is a personal portfolio project built using **Next.js**, **React**, and **Tailwind CSS**. It showcases projects, skills, and contact information in a sleek, modern design. The project includes theme switching, interactive UI elements, and form handling via EmailJS.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 15** for fast, optimized performance
+- **Tailwind CSS** for styling
+- **Shadcn UI** for accessible UI components
+- **Cal** for scheduling meetings
+- **Lucide Icons** for a clean icon set
+- **EmailJS** for contact form submissions
+- **Jest & Testing Library** for testing
+- **ESLint & Husky** for linting and pre-commit hooks
+
+## Installation
+
+Ensure you have **Node.js** installed. Clone the repository and install dependencies:
+
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command              | Description                  |
+| -------------------- | ---------------------------- |
+| `npm run dev`        | Start the development server |
+| `npm run build`      | Build for production         |
+| `npm run start`      | Start the production server  |
+| `npm run lint`       | Run ESLint checks            |
+| `npm run test`       | Run Jest tests               |
+| `npm run test:watch` | Run Jest tests in watch mode |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS, Tailwind Merge, Tailwind Animate
+- **UI Components**: Radix UI, Lucide React
+- **Forms**: EmailJS
+- **State Management**: Zod (for validation)
+- **Testing**: Jest, React Testing Library
+- **Linting & Formatting**: ESLint, Husky
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Run `npm run dev` to start the development server.
+2. Open `http://localhost:3000` in your browser.
+3. Modify components in `src/components` to customize the portfolio.

@@ -13,7 +13,7 @@ const Socials = () => {
       <ScheduleCallPopup />
       <DialogContactForm />
       <div className="flex items-center gap-2">
-        <Button
+        {/* <Button
           variant="outline"
           className="active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100"
           asChild
@@ -21,7 +21,7 @@ const Socials = () => {
           <a href={"/"} target="_blank">
             {localText.socials.resume}
           </a>
-        </Button>
+        </Button> */}
         {Object.keys(links).map((key: string, index: number) => {
           const link = links[key as keyof typeof links];
           return (

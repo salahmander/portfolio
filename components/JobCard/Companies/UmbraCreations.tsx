@@ -48,7 +48,7 @@ const UmbraCreations = () => {
         </span>
       </div>
       <ul className="list-disc pl-5 text-sm ">
-        <li>Freelancing</li>
+        <li>Currently working as a freelance contractor</li>
       </ul>
     </div>
   );

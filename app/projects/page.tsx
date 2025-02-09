@@ -1,6 +1,12 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import AljabirMarket from "@/components/ProjectCard/Projects/AljabirMarket";
+import ArkBlueprint from "@/components/ProjectCard/Projects/ArkBlueprint";
+import AuctionService from "@/components/ProjectCard/Projects/AuctionService";
+import EverythingCrypto from "@/components/ProjectCard/Projects/EverythingCrypto";
+import NachtBootcamp from "@/components/ProjectCard/Projects/NachtBootcamp";
+import Portfolio from "@/components/ProjectCard/Projects/Portfolio";
+import PropertiesProject from "@/components/ProjectCard/Projects/PropertiesProject";
 
 const ProjectsPage = () => {
   return (
@@ -12,7 +18,13 @@ const ProjectsPage = () => {
         <section className="flex flex-col items-center relative w-full mx-auto lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
           <div className="my-8 space-y-4 max-w-4xl">
-            {Array(4).fill(<ProjectCard />)}
+            <Portfolio />
+            <PropertiesProject />
+            <ArkBlueprint />
+            <AuctionService />
+            <EverythingCrypto />
+            <NachtBootcamp />
+            <AljabirMarket />
           </div>
         </section>
       </div>
