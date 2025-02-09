@@ -3,9 +3,12 @@ import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 import RepositoryCard from "@/components/RepositoryCard/RepositoryCard";
 
 import getRepositories from "@/app/actions/getRepositories";
+import { sortRepositoriesByDate } from "./page.helpers";
 
 const RepositoriesPage = async () => {
-  const repositories = await getRepositories();
+  const repositoriesData = await getRepositories();
+
+  const repositories = sortRepositoriesByDate(repositoriesData);
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
