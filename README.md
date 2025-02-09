@@ -4,7 +4,7 @@ This is a personal portfolio project built using **Next.js**, **React**, and **T
 
 ## Features
 
-- **Next.js 15** for fast, optimized performance
+- **Next.js 15** for fast, optimised performance
 - **Tailwind CSS** for styling
 - **Shadcn UI** for accessible UI components
 - **Cal** for scheduling meetings
@@ -36,7 +36,7 @@ npm install
 
 - **Framework**: Next.js 15
 - **Styling**: Tailwind CSS, Tailwind Merge, Tailwind Animate
-- **UI Components**: Radix UI, Lucide React
+- **UI Components**: Shadcn UI, Lucide React
 - **Forms**: EmailJS
 - **State Management**: Zod (for validation)
 - **Testing**: Jest, React Testing Library
@@ -46,4 +46,4 @@ npm install
 
 1. Run `npm run dev` to start the development server.
 2. Open `http://localhost:3000` in your browser.
-3. Modify components in `src/components` to customize the portfolio.
+3. Modify components in `src/components` to customise the portfolio.
