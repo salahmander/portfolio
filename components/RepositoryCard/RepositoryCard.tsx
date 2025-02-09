@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import { RestEndpointMethodTypes } from "@octokit/plugin-rest-endpoint-methods";
+import type { RestEndpointMethodTypes } from "@octokit/plugin-rest-endpoint-methods";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
 
