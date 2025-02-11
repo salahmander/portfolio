@@ -1,8 +1,8 @@
 import { calculateJobDuration } from "../JobCard.helpers";
 
 const BullionByPost = () => {
-  const startDate = "2019-01-01";
-  const endDate = "2020-01-01";
+  const startDate = "2019-09-01";
+  const endDate = "2020-12-01";
   const isCurrent = false;
   const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
   return (
@@ -25,7 +25,7 @@ const BullionByPost = () => {
         </div>
       </div>
       <p className="text-s">(B2C) – Online gold & silver retailer</p>
-      <p className="text-xs px-2 text-right">2019 - 2020 · {jobDuration}</p>
+      <p className="text-xs px-2 text-right">Sep 2019 - Dec 2020 · {jobDuration}</p>
 
       <p className="tracking-tight text-lg font-bold">
         Junior Full Stack Software Engineer

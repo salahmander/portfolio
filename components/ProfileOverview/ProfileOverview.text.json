@@ -2,7 +2,7 @@
     "profileOverview": {
         "sitename": "salahabdo.co.uk",
         "name": "Salah Abdo",
-        "tagline": "Umbra Creations: Where Every Idea Finds its Light",
+        "tagline": "Where Every Idea Finds its Light",
         "skills": [
             {
                 "category": "Interest",
@@ -19,9 +19,11 @@
                     "Next.js",
                     "HTML",
                     "CSS",
-                    "SaaS",
                     "Tailwind CSS",
-                    "Shadcn/ui"
+                    "Shadcn/ui",
+                    "Storybook",
+                    "Jest",
+                    "React Testing Library"
                 ]
             },
             {
@@ -35,13 +37,25 @@
             {
                 "category": "Tools",
                 "options": [
-                    "Unix (Mac OS)",
-                    "Linux (Ubuntu)",
-                    "Visual Studio Code",
+                    "AWS",
+                    "DataDog",
+                    "SonarCloud",
+                    "Figma",
+                    "Jira",
                     "Git",
                     "GitHub",
-                    "AWS",
+                    "GitHub Actions",
                     "Vercel"
+                ]
+            },
+            {
+                "category": "Agile Methodologies",
+                "options": [
+                    "Scrum",
+                    "Sprint planning",
+                    "Collaborative Teamwork",
+                    "Iterative Development",
+                    "Continuous Improvement"
                 ]
             }
         ]

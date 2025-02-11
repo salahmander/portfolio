@@ -19,15 +19,15 @@ const ProfileOverview = () => {
           <ThemeToggler />
         </div>
       </div>
-      <h3 className="mt-2 text-lg">
+      <h2 className="mt-2 text-lg">
         {localText.profileOverview.tagline}{" "}
         <span className="sr-only">tagline</span>
-      </h3>
+      </h2>
       <p className=" my-6 max-w-2xl text-foreground/90">
         Hey 👋 <strong>Salah</strong> here! I&apos;m a{" "}
         <strong>Software Engineer</strong> with a{" "}
-        <strong>Computer Science degree</strong> and over{" "}
-        <strong>4 years</strong> of <strong>experience</strong> delivering
+        <strong>Computer Science degree</strong> and{" "}
+        <strong>5 years</strong> of <strong>experience</strong> delivering
         high-quality software solutions. Skilled in{" "}
         <strong>React, TypeScript, JavaScript, and Python</strong>, with a
         proven track record of building scalable, user-centric applications.
