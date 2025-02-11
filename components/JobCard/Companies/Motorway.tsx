@@ -2,9 +2,8 @@ import { calculateJobDuration } from "../JobCard.helpers";
 
 const Motorway = () => {
   const startDate = "2022-04-01";
-  const endDate = "2024-08-01";
-  const isCurrent = false;
-  const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
+  const isCurrent = true;
+  const jobDuration = calculateJobDuration(startDate, isCurrent);
   return (
     <div>
       <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
@@ -28,7 +27,7 @@ const Motorway = () => {
         (B2B) – Online marketplace for selling used cars to dealers
       </p>
       <p className="text-xs px-2 text-right">
-        Apr 2022 - Aug 2024 · {jobDuration}
+        Apr 2022 - Current · {jobDuration}
       </p>
 
       <p className="tracking-tight text-lg font-bold">Frontend Engineer</p>

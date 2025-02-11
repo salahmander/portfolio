@@ -4,7 +4,6 @@ import Motorway from "@/components/JobCard/Companies/Motorway";
 import LevelPrime from "@/components/JobCard/Companies/LevelPrime";
 import BullionByPost from "@/components/JobCard/Companies/BullionByPost";
 import Faurecia from "@/components/JobCard/Companies/Faurecia";
-import UmbraCreations from "@/components/JobCard/Companies/UmbraCreations";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 
 const HomePage = () => {
@@ -18,7 +17,6 @@ const HomePage = () => {
           <NavigationBar />
           <div className="my-8 w-full self-start max-w-xl space-y-10">
             {/* TODO: Create feature - Create CRUD Backend to handle markdown */}
-            <UmbraCreations />
             <Motorway />
             <LevelPrime />
             <BullionByPost />
