@@ -19,10 +19,10 @@ const ProfileOverview = () => {
           <ThemeToggler />
         </div>
       </div>
-      <h3 className="mt-2 text-lg">
+      <h2 className="mt-2 text-lg">
         {localText.profileOverview.tagline}{" "}
         <span className="sr-only">tagline</span>
-      </h3>
+      </h2>
       <p className=" my-6 max-w-2xl text-foreground/90">
         Hey 👋 <strong>Salah</strong> here! I&apos;m a{" "}
         <strong>Software Engineer</strong> with a{" "}
