@@ -1,11 +1,21 @@
+import dayjs from "dayjs";
+import ReactMarkdown from "react-markdown";
+
 import { calculateJobDuration } from "./JobCard.helpers";
+
 import type { JobCardProps } from "./JobCard.types";
 
 const JobCard = ({ job }: JobCardProps) => {
-  const { startDate, endDate, isCurrent } = job;
-  const jobDuration = calculateJobDuration(startDate, isCurrent, endDate);
+  const {
+    date: { start, end },
+    isCurrent,
+  } = job;
+
+  const jobDuration = calculateJobDuration(start, isCurrent, end);
+  const startDate = dayjs(start).format("MMM YYYY");
+  const endDate = end ? dayjs(end).format("MMM YYYY") : "";
   return (
-    <div className="p-4 border rounded-lg shadow-md bg-white">
+    <div>
       <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
         <a
           href={job.companyUrl}
@@ -26,26 +36,31 @@ const JobCard = ({ job }: JobCardProps) => {
       </div>
       <p className="text-s">{job.description}</p>
       <p className="text-xs px-2 text-right">
-        {startDate} - {isCurrent ? "Present" : endDate} · {jobDuration}
+        {startDate} - {isCurrent ? "Current" : endDate} · {jobDuration}
       </p>
       <p className="tracking-tight text-lg font-bold">{job.position}</p>
       <div className="flex flex-wrap gap-1 mb-2">
-        {job.skills.map((skill, index) => (
+        {job.skills.map((skill) => (
           <span
-            key={index}
+            key={skill.id}
             className="text-xs font-bold px-2 py-1 bg-secondary rounded cursor-default"
           >
-            {skill}
+            {skill.name}
           </span>
         ))}
       </div>
-      <ul className="list-disc pl-5 text-sm ">
-        {job.achievements.map((achievement, index) => (
-          <li key={index}>
-            <strong>{achievement.title}:</strong> {achievement.details}
-          </li>
-        ))}
-      </ul>
+      <div className="text-sm">
+        <ReactMarkdown
+          components={{
+            ul: ({ children }) => (
+              <ul className="list-disc pl-5 text-sm ">{children}</ul>
+            ),
+            li: ({ children }) => <li>{children}</li>,
+          }}
+        >
+          {job.content.parent}
+        </ReactMarkdown>
+      </div>
     </div>
   );
 };

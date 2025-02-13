@@ -1,12 +1,17 @@
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 
-import Motorway from "@/components/JobCard/Companies/Motorway";
-import LevelPrime from "@/components/JobCard/Companies/LevelPrime";
-import BullionByPost from "@/components/JobCard/Companies/BullionByPost";
-import Faurecia from "@/components/JobCard/Companies/Faurecia";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
+import JobCard from "@/components/JobCard/JobCard";
 
-const HomePage = () => {
+import { getWorkExperience } from "./actions/getWorkExperience/getWorkExperience";
+
+const HomePage = async () => {
+  const workExperiences = await getWorkExperience();
+
+  const sortedWorkExperience = workExperiences.sort(
+    (a, b) =>
+      new Date(b.date.start).getTime() - new Date(a.date.start).getTime()
+  );
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
@@ -16,11 +21,9 @@ const HomePage = () => {
         <section className="flex flex-col items-center relative w-full lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
           <div className="my-8 w-full self-start max-w-xl space-y-10">
-            {/* TODO: Create feature - Create CRUD Backend to handle markdown */}
-            <Motorway />
-            <LevelPrime />
-            <BullionByPost />
-            <Faurecia />
+            {sortedWorkExperience.map((workExperience) => (
+              <JobCard key={workExperience.id} job={workExperience} />
+            ))}
           </div>
         </section>
       </div>
