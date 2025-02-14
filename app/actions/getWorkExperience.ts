@@ -1,3 +1,5 @@
+import { unstable_cache } from "next/cache";
+
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 
@@ -33,6 +35,7 @@ export const getWorkExperienceContent = async (blockId: string) => {
  * @returns A promise that resolves to an object containing parsed work experience details.
  *
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const parseWorkExperience = async (workExperience: any) => {
   const content = await getWorkExperienceContent(workExperience.id);
 
@@ -62,7 +65,7 @@ const parseWorkExperience = async (workExperience: any) => {
  *
  * @throws Will log an error message to the console if there is an issue fetching data from Notion.
  */
-export const getWorkExperience = async () => {
+export const getWorkExperience = unstable_cache(async () => {
   const databaseId = "199fb82e047b80a8a88ac6edd1f39f93";
   try {
     const workExperience = await notion.databases.query({
@@ -79,4 +82,4 @@ export const getWorkExperience = async () => {
     console.error("Error fetching work experience from notion:", error);
     return [];
   }
-};
+});
