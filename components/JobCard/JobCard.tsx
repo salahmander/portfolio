@@ -58,7 +58,7 @@ const JobCard = ({ job }: JobCardProps) => {
             li: ({ children }) => <li>{children}</li>,
           }}
         >
-          {job.content.parent}
+          {job?.content?.parent}
         </ReactMarkdown>
       </div>
     </div>
