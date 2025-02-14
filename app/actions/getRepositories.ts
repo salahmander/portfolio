@@ -15,7 +15,7 @@ const excludeRepositoriesList = [
   "MyCourseWork",
 ];
 
-const getRepositories = unstable_cache(async () => {
+export const getRepositories = unstable_cache(async () => {
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   const { data } = await octokit.rest.repos.listForUser({
     username: "salahmander",
@@ -33,4 +33,3 @@ const getRepositories = unstable_cache(async () => {
   return repositories;
 });
 
-export default getRepositories;

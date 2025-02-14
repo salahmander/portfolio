@@ -2,7 +2,7 @@ import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 import RepositoryCard from "@/components/RepositoryCard/RepositoryCard";
 
-import getRepositories from "@/app/actions/getRepositories";
+import { getRepositories } from "@/app/actions/getRepositories";
 import { sortRepositoriesByDate } from "./page.helpers";
 
 const RepositoriesPage = async () => {
