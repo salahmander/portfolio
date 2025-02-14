@@ -1,5 +1,7 @@
 "use server";
 
+import { unstable_cache } from "next/cache";
+
 import { Octokit } from "octokit";
 
 // A list of repository names to be excluded
@@ -13,7 +15,7 @@ const excludeRepositoriesList = [
   "MyCourseWork",
 ];
 
-const getRepositories = async () => {
+export const getRepositories = unstable_cache(async () => {
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   const { data } = await octokit.rest.repos.listForUser({
     username: "salahmander",
@@ -29,6 +31,5 @@ const getRepositories = async () => {
   );
 
   return repositories;
-};
+});
 
-export default getRepositories;
