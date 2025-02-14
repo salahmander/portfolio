@@ -1,5 +1,5 @@
 {
-    "cron": [
+    "crons": [
         {
             "path": "/api/revalidate",
             "schedule": "0 */4 * * *"
