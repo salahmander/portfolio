@@ -4,11 +4,12 @@ import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import JobCard from "@/components/JobCard/JobCard";
 
 import { getWorkExperience } from "./actions/getWorkExperience";
+import type { WorkExperience } from "@/components/JobCard/JobCard.types";
 
 const HomePage = async () => {
-  const workExperiences = await getWorkExperience();
+  const workExperience = await getWorkExperience();
 
-  const sortedWorkExperience = workExperiences.sort(
+  const sortedWorkExperience = workExperience.sort(
     (a, b) =>
       new Date(b.date.start).getTime() - new Date(a.date.start).getTime()
   );
@@ -21,8 +22,8 @@ const HomePage = async () => {
         <section className="flex flex-col items-center relative w-full lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
           <div className="my-8 w-full self-start max-w-xl space-y-10">
-            {sortedWorkExperience.map((workExperience) => (
-              <JobCard key={workExperience.id} job={workExperience} />
+            {sortedWorkExperience.map((job: WorkExperience) => (
+              <JobCard key={job.id} job={job} />
             ))}
           </div>
         </section>
