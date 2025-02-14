@@ -1,6 +1,8 @@
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 
+import type { WorkExperience } from "@/components/JobCard/JobCard.types";
+
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
@@ -12,7 +14,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
  *
  * @throws Will log an error message to the console if fetching the Notion content fails.
  */
-const getWorkExperienceContent = async (blockId) => {
+export const getWorkExperienceContent = async (blockId: string) => {
   try {
     const mdblocks = await n2m.pageToMarkdown(blockId);
     const mdString = n2m.toMarkdownString(mdblocks);
@@ -31,28 +33,32 @@ const getWorkExperienceContent = async (blockId) => {
  * @returns A promise that resolves to an object containing parsed work experience details.
  *
  */
-const parseWorkExperience = async (workExperience) => {
+const parseWorkExperience = async (workExperience: any) => {
   const content = await getWorkExperienceContent(workExperience.id);
 
-  return {
+  const { properties } = workExperience;
+
+  const parsedWorkExperience: WorkExperience = {
     id: workExperience.id,
-    companyName: workExperience.properties.company_name?.title[0].plain_text || "",
-    companyUrl: workExperience.properties.site_url.url || "",
-    employmentType: workExperience.properties.employment_type.select.name || "",
-    location: workExperience.properties.location.rich_text[0].plain_text || "",
-    date: workExperience.properties.date.date || null,
-    isCurrent: workExperience.properties.is_current.checkbox || false,
-    position: workExperience.properties.position.rich_text[0].plain_text || "",
-    description: workExperience.properties.description.rich_text[0].plain_text || "",
-    skills: workExperience.properties.skills.multi_select || [],
+    companyName: properties.company_name.title[0].plain_text || "",
+    companyUrl: properties.site_url.url || "",
+    employmentType: properties.employment_type.select.name || "",
+    location: properties.location.rich_text[0].plain_text || "",
+    date: properties.date.date || null,
+    isCurrent: properties.is_current.checkbox || false,
+    position: properties.position.rich_text[0].plain_text || "",
+    description: properties.description.rich_text[0].plain_text || "",
+    skills: properties.skills.multi_select || [],
     content,
   };
+
+  return parsedWorkExperience;
 };
 
 /**
  * Fetches work experience data and content, from a Notion database and parses it.
  *
- * @returns {Promise<any[]>} A promise that resolves to an array of parsed work experience data.
+ * @returns {Promise<WorkExperience[]>} A promise that resolves to an array of parsed work experience data.
  *
  * @throws Will log an error message to the console if there is an issue fetching data from Notion.
  */

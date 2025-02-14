@@ -3,7 +3,7 @@ import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import JobCard from "@/components/JobCard/JobCard";
 
-import { getWorkExperience } from "./actions/getWorkExperience/getWorkExperience";
+import { getWorkExperience } from "./actions/getWorkExperience";
 
 const HomePage = async () => {
   const workExperiences = await getWorkExperience();
