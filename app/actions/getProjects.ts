@@ -4,6 +4,13 @@ import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
+/**
+ * Fetches projects from a Notion database and formats them.
+ *
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of formatted project objects.
+ *
+ * @throws Will log an error message to the console if fetching projects fails.
+ */
 export const getProjects = async () => {
   const databaseId = "199fb82e047b804aa8e0cc1d4b5592d8";
   try {
