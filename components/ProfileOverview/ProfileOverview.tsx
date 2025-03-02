@@ -1,13 +1,20 @@
+import { Suspense } from "react";
+
 import Link from "next/link";
 
 import ReactMarkdown from "react-markdown";
 
 import Socials from "@/components/Socials/Socials";
 import ThemeToggler from "../Theme/ThemeToggler/ThemeToggler";
-import { getProfileOverview } from "@/app/actions/getProfileOverview";
+import { getProfileOverview } from "@/app/actions/getProfileOverview/getProfileOverview";
+import ProfileOverviewSkeleton from "./Skeleton/ProfileOverviewSkeleton";
 
-const ProfileOverview = async () => {
+const ProfileContent = async () => {
   const profileOverview = await getProfileOverview();
+
+  if (!profileOverview) {
+    return <ProfileOverviewSkeleton />;
+  }
 
   return (
     <section className="w-full flex flex-col lg:min-h-[calc(100vh-7rem)]">
@@ -38,6 +45,16 @@ const ProfileOverview = async () => {
           </p>
         ))}
       </div>
+    </section>
+  );
+};
+
+const ProfileOverview = () => {
+  return (
+    <section className="w-full flex flex-col lg:min-h-[calc(100vh-7rem)]">
+      <Suspense fallback={<ProfileOverviewSkeleton />}>
+        <ProfileContent />
+      </Suspense>
     </section>
   );
 };
