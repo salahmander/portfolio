@@ -1,5 +1,7 @@
 "use server";
 
+import { unstable_cache } from "next/cache";
+
 import { Client } from "@notionhq/client";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -11,7 +13,7 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
  *
  * @throws Will log an error message to the console if fetching projects fails.
  */
-export const getProjects = async () => {
+export const getProjects = unstable_cache(async () => {
   const databaseId = "199fb82e047b804aa8e0cc1d4b5592d8";
   try {
     const projects = await notion.databases.query({
@@ -38,4 +40,4 @@ export const getProjects = async () => {
     console.error("Error fetching projects from Notion:", error);
     return [];
   }
-};
+});
