@@ -1,14 +1,16 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
-import AljabirMarket from "@/components/ProjectCard/Projects/AljabirMarket";
-import ArkBlueprint from "@/components/ProjectCard/Projects/ArkBlueprint";
-import AuctionService from "@/components/ProjectCard/Projects/AuctionService";
-import EverythingCrypto from "@/components/ProjectCard/Projects/EverythingCrypto";
-import NachtBootcamp from "@/components/ProjectCard/Projects/NachtBootcamp";
-import Portfolio from "@/components/ProjectCard/Projects/Portfolio";
-import PropertiesProject from "@/components/ProjectCard/Projects/PropertiesProject";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
-const ProjectsPage = () => {
+import type { ProjectType } from "@/components/ProjectCard/ProjectCard.types";
+
+import { getProjects } from "../actions/getProjects";
+
+const ProjectsPage = async () => {
+  const projects = await getProjects();
+  const sortedProjects = projects.sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
@@ -18,13 +20,9 @@ const ProjectsPage = () => {
         <section className="flex flex-col items-center relative w-full mx-auto lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
           <div className="my-8 space-y-4 max-w-4xl">
-            <Portfolio />
-            <PropertiesProject />
-            <ArkBlueprint />
-            <AuctionService />
-            <EverythingCrypto />
-            <NachtBootcamp />
-            <AljabirMarket />
+            {sortedProjects.map((project: ProjectType) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
           </div>
         </section>
       </div>

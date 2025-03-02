@@ -10,8 +10,9 @@ export const getProjects = async () => {
     const projects = await notion.databases.query({
       database_id: databaseId,
     });
-    
+
     const formattedProjects = projects.results.map((project) => ({
+      id: project.id,
       name: project.properties.name?.rich_text[0]?.plain_text,
       description: project.properties.description?.rich_text[0]?.plain_text,
       githubUrl: project.properties.github_url?.rich_text[0]?.plain_text,
