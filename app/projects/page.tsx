@@ -4,7 +4,7 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 import type { ProjectType } from "@/components/ProjectCard/ProjectCard.types";
 
-import { getProjects } from "../actions/getProjects";
+import { getProjects } from "../actions/getProjects/getProjects";
 
 const ProjectsPage = async () => {
   const projects = await getProjects();
