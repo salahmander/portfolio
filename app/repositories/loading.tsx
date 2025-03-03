@@ -1,14 +1,9 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
-import RepositoryCard from "@/components/RepositoryCard/RepositoryCard";
 
-import { getRepositories } from "@/app/actions/getRepositories";
-import { sortRepositoriesByDate } from "./page.helpers";
+import RepositoryCardSkeleton from "@/components/RepositoryCard/Skeleton/RepositoryCardSkeleton";
 
-const RepositoriesPage = async () => {
-  const repositoriesData = await getRepositories();
-
-  const repositories = sortRepositoriesByDate(repositoriesData);
+const RepositoriesLoadingPage = () => {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
@@ -17,9 +12,9 @@ const RepositoriesPage = async () => {
         </section>
         <section className="flex flex-col items-center relative w-full lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
-          <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-3">
-            {repositories.map((repository) => (
-              <RepositoryCard key={repository.id} repository={repository} />
+          <div className="my-8 grid grid-cols-1 md:grid-cols-3 gap-3 w-full">
+            {[...Array(15)].map((_, index) => (
+              <RepositoryCardSkeleton key={index} />
             ))}
           </div>
         </section>
@@ -28,4 +23,4 @@ const RepositoriesPage = async () => {
   );
 };
 
-export default RepositoriesPage;
+export default RepositoriesLoadingPage;

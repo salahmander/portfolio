@@ -1,16 +1,9 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import ProfileOverview from "@/components/ProfileOverview/ProfileOverview";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
-import type { ProjectType } from "@/components/ProjectCard/ProjectCard.types";
+import ProjectCardSkeleton from "@/components/ProjectCard/Skeleton/ProjectCardSkeleton";
 
-import { getProjects } from "../actions/getProjects/getProjects";
-
-const ProjectsPage = async () => {
-  const projects = await getProjects();
-  const sortedProjects = projects.sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  );
+const ProjectsLoadingPage = () => {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap lg:divide-x">
@@ -19,9 +12,9 @@ const ProjectsPage = async () => {
         </section>
         <section className="flex flex-col items-center relative w-full mx-auto lg:w-3/5 p-2 md:p-8 lg:h-full lg:overflow-y-auto">
           <NavigationBar />
-          <div className="my-8 space-y-4 max-w-4xl">
-            {sortedProjects.map((project: ProjectType) => (
-              <ProjectCard key={project.id} project={project} />
+          <div className="my-8 space-y-4 w-full max-w-4xl mx-auto">
+            {[...Array(5)].map((_, index) => (
+              <ProjectCardSkeleton key={index} />
             ))}
           </div>
         </section>
@@ -30,4 +23,4 @@ const ProjectsPage = async () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectsLoadingPage;

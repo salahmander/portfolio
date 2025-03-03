@@ -1,49 +1,60 @@
+import { Suspense } from "react";
+
 import Link from "next/link";
 
-import localText from "./ProfileOverview.text.json";
+import ReactMarkdown from "react-markdown";
+
 import Socials from "@/components/Socials/Socials";
 import ThemeToggler from "../Theme/ThemeToggler/ThemeToggler";
+import { getProfileOverview } from "@/app/actions/getProfileOverview/getProfileOverview";
+import ProfileOverviewSkeleton from "./Skeleton/ProfileOverviewSkeleton";
 
-const ProfileOverview = () => {
-  const skills = localText.profileOverview.skills;
+const ProfileContent = async () => {
+  const profileOverview = await getProfileOverview();
+
+  if (!profileOverview) {
+    return <ProfileOverviewSkeleton />;
+  }
+
   return (
     <section className="w-full flex flex-col lg:min-h-[calc(100vh-7rem)]">
       <Link href="https://www.salahabdo.co.uk/">
-        <span className="font-mono text-sm underline">
-          {localText.profileOverview.sitename}
-        </span>
+        <span className="font-mono text-sm underline">salahabdo.co.uk</span>
       </Link>
       <div className="flex justify-between items-center mt-6">
-        <h1 className="head-text-sm">{localText.profileOverview.name}</h1>
+        <h1 className="head-text-sm">{profileOverview.name}</h1>
         <div className="flex items-center gap-2">
           <ThemeToggler />
         </div>
       </div>
       <h2 className="mt-2 text-lg">
-        {localText.profileOverview.tagline}{" "}
-        <span className="sr-only">tagline</span>
+        {profileOverview.tag_line} <span className="sr-only">tagline</span>
       </h2>
-      <p className=" my-6 max-w-2xl text-foreground/90">
-        Hey 👋 <strong>Salah</strong> here! I&apos;m a{" "}
-        <strong>Software Engineer</strong> with a{" "}
-        <strong>Computer Science degree</strong> and{" "}
-        <strong>5 years</strong> of <strong>experience</strong> delivering
-        high-quality software solutions. Skilled in{" "}
-        <strong>React, TypeScript, JavaScript, and Python</strong>, with a
-        proven track record of building scalable, user-centric applications.
+      <div className="my-6 max-w-2xl text-foreground/90">
+        <ReactMarkdown>{profileOverview.summary.parent}</ReactMarkdown>
         <span className="sr-only">bio</span>
-      </p>
+      </div>
       <Socials />
       <div className="flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">
-        {skills.map((skill) => (
+        {profileOverview.skills.map((skill) => (
           <p key={skill.category}>
             <span className="font-semibold text-primary/90">
               {skill.category}:
             </span>{" "}
-            {skill.options.join(", ")}
+            {skill.options.map((option) => option.name).join(", ")}
           </p>
         ))}
       </div>
+    </section>
+  );
+};
+
+const ProfileOverview = () => {
+  return (
+    <section className="w-full flex flex-col lg:min-h-[calc(100vh-7rem)]">
+      <Suspense fallback={<ProfileOverviewSkeleton />}>
+        <ProfileContent />
+      </Suspense>
     </section>
   );
 };

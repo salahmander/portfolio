@@ -1,20 +1,23 @@
-type Link = {
-  social: string;
-  link: string;
-};
-
 type Images = {
   light: string;
   dark?: string;
 };
 
+type Skill = {
+  id: string;
+  name: string;
+  color: string;
+}
+
 export type ProjectType = {
+  id: string;
   name: string;
   isArchived: boolean;
-  created_at: string;
+  githubUrl: string;
+  webUrl: string;
+  createdAt: string;
   description: string;
-  skills: string[];
-  links: Link[];
+  skills: Skill[];
   images: Images;
 };
 
